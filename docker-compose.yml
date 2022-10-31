@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  ansible:
+    container_name: ansible-tor
+    image: ghcr.io/antyung88/ansible-tor:latest
+    build: .
+    environment:
+      ONION_ADDRESS:
+      SSH_USER:
+      SSH_PASSWORD:
+    volumes:
+      - "./playbook:/ansible"
